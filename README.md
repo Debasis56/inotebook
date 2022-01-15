@@ -1,4 +1,5 @@
 **iNotebook - Your Notebook on the cloud**
+iNotebook is a note taking app which authenticates each user using signup and login backend proceses and enable every user to keep his/her notes safe on the cloud. 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

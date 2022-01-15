@@ -3,8 +3,11 @@ import AddNote from "./AddNote";
 import { useNavigate } from "react-router-dom";
 import NoteItem from "./NoteItem";
 import noteContext from "./notes/noteContext";
+import { ThemeContext } from "../App";
+
 
 export const Notes = (props) => {
+  const contest = useContext(ThemeContext)
   const context = useContext(noteContext);
   let history = useNavigate();
   const { notes, getNote, editNote } = context;
@@ -145,7 +148,9 @@ const onChange = (e) => {
         </div>
       </div>
 
-      <div className="row my-4">
+      <div className={`row my-4 text-${
+          contest.mode === "light" ? "dark" : "light"
+        }`}>
         <h2>Your Notes</h2>
         <div className = "container mx- 2">
         {notes.length===0 && 'No notes to display'}

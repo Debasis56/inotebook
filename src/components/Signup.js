@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../App";
 const Signup = (props) => {
+  const contest = useContext(ThemeContext)
   const [credentials, setcredentials] = useState({
     name: "",
     email: "",
@@ -51,7 +53,9 @@ const Signup = (props) => {
     setcredentials({ ...credentials, [e.target.name]: e.target.value });
   };
   return (
-    <div className="container mt-2">
+    <div className={`container mt-2 text-${
+          contest.mode === "light" ? "dark" : "light"
+        }`}>
       <h2 className="my-3">Create an account to use iNotebook</h2>
       <form onSubmit={handleSubmit}>
         <div className="my-3">

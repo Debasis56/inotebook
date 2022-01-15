@@ -1,7 +1,9 @@
 import React, {useContext, useState} from "react";
 import noteContext from './notes/noteContext'
+import { ThemeContext } from "../App";
 
 const AddNote = (props) => {
+    const contest = useContext(ThemeContext)
     const context = useContext(noteContext)
     const {addNote} = context
     const [note, setNote] = useState({title: "", description: "", tag: ""})
@@ -18,7 +20,9 @@ const AddNote = (props) => {
     }
   return (
     <div>
-      <div className="container my-2">
+      <div className={`container my-2 text-${
+          contest.mode === "light" ? "dark" : "light"
+        }`}>
         <h2>Add a Note</h2>
         <form className="my-3">
           <div className="mb-3">

@@ -1,5 +1,6 @@
 
 import './App.css';
+import React, {createContext} from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,7 +14,7 @@ import Alert from './components/Alert';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import { useState } from 'react';
-
+export const ThemeContext = createContext()
 function App() {
   const [alert, setalert] = useState(null)
   const showAlert = (message, type, typeMessage)=>{
@@ -27,11 +28,31 @@ function App() {
     }, 3000);
 
   }
+
+  const [mode, setmode] = useState('light');//Whether dark mode is enabled or not
+  const toggleMode = ()=>{
+    if(mode === 'light')
+    {
+    setmode('dark');
+    document.body.style.backgroundColor = 'rgb(22,22,29)';
+    //showAlert(" Dark Mode has been enabled", "success", "SUCCESS");
+    }
+    else
+    {
+    setmode('light');
+    document.body.style.backgroundColor = 'white';
+    //showAlert(" Light Mode has been enabled", "success", "SUCCESS")
+    }
+ }
   return (
     <>
+    
     <NoteState>
+
     <Router>
+    <ThemeContext.Provider value={{mode, toggleMode}}>
       <Navbar/>
+    
       <Alert alert={alert}/>
       <div className="container my-3">
     <Routes>
@@ -42,8 +63,11 @@ function App() {
       
     </Routes>
     </div>
+    </ThemeContext.Provider>
     </Router>
     </NoteState>
+    
+    
     </>
   );
 }

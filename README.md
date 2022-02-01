@@ -1,6 +1,63 @@
-**iNotebook - Your Notebook on the cloud**
-iNotebook is a note taking app which authenticates each user using signup and login backend proceses and enable every user to keep his/her notes safe on the cloud. 
-# Getting Started with Create React App
+<h1>iNotebook - Your Notebook on the cloud</h1>
+
+## Project title - iNotebook
+iNotebook is a note taking app which authenticates each user using signup and login backend proceses and enable every user to keep his/her notes safe on the cloud.
+
+## Motivation
+It becomes very hectic to keep our notes organized. Most of us store our notes and forget where we had saved. So, I came up with this idea of creating a platform where
+each user can verify himself/herself and keep all the notes secured at one place and access it easily whenever needed.
+
+## Screenshots
+
+![notebook1](https://user-images.githubusercontent.com/56356721/152055349-9f73d834-f457-4af1-933b-cf697d0b9382.png)
+
+<hr/>
+
+![notebook2](https://user-images.githubusercontent.com/56356721/152055352-a1bfae0c-5914-4046-a3b1-9a47b187d685.png)
+
+<hr/>
+
+![notebook3](https://user-images.githubusercontent.com/56356721/152055359-6c70e1d5-4190-488c-a128-816a61db0c98.png)
+
+<hr/>
+
+![notebook4](https://user-images.githubusercontent.com/56356721/152055366-6a31e5fb-4b50-4725-9ffd-7e4bc36ad443.png)
+
+<hr/>
+
+![notebook5](https://user-images.githubusercontent.com/56356721/152055341-f5cf086c-618d-4ec8-9b39-775002090de9.png)
+
+<hr/>
+
+## Tech/framework used
+<b>Built with</b>
+
+### * `HTML`
+### * `CSS`
+### * `NodeJS`
+### * `ExpressJS`
+### * `MongoDB`
+### * `MongooseJS`
+### * `ReactJS`
+### * `Bootstrap`
+
+## Features
+**-Includes a fully functional authentication system with backend which stores and validates users**
+<br/>
+**-Has a workplace where each user can visit his personalized notes**
+<br/>
+**-User can perform any type of operations in his/her notes such as adding, editing or deleting**
+<br/>
+**-Notes are stored in a visually appealing manner by the use of cards**
+<br/>
+**-Includes full DarkMode**
+
+
+
+
+## Installation
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -70,3 +127,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<hr/>
+
+MIT © [Debasis]()
